@@ -19,7 +19,7 @@ for i: Int in 1..<CommandLine.arguments.count {
     let filePath = URL(fileURLWithPath: argument, relativeTo: cwd)
 
     do {
-        try fm.trashItem(at: filePath, resultingItemURL: &trashedPath)   
+        try fm.trashItem(at: filePath, resultingItemURL: &trashedPath)
     } catch {
         print("tt: \(argument): No such file or directory")
     }
