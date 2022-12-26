@@ -11,4 +11,3 @@ clean:
 
 install: build/tt
 	cp $< ~/.local/bin/tt
-	
