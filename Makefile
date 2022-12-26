@@ -1,7 +1,14 @@
-all: tt
+all: tt 
 	
-tt: tt.swift
-	swiftc -o tt tt.swift
+tt: tt.swift | build
+	swiftc -o build/tt tt.swift
+
+build:
+	mkdir -p $@
 
 clean:
-	rm tt
+	$(RM) -rv build
+
+install: build/tt
+	cp $< ~/.local/bin/tt
+	
